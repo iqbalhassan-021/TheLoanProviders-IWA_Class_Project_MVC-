@@ -5,17 +5,23 @@ namespace TheLoanProviders.Controllers
     public class HomeController : Controller
     {
     
-        public IActionResult Index()
+        public IActionResult Index(string fname, string lname, string email, string Phone)
         {
-        
-            return View("Index");
+
+            if(fname != null && lname != null)
+            {
+                ViewBag.Message = "The data is being recieved";
+            }
+         
+            return View("ClassInputForm");
+
         }
     
         public IActionResult ClassInputForm()
         {
-            
-            ViewBag.Message = "The data is being recieved";
-            return View("ClassInputForm");
+            return View("Index");
         }
+
+      
     }
 }
