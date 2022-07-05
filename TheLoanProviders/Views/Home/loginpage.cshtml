@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/js/code.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/assets/tlp.jpg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLP - Login</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <h1>T L P</h1>
+            <p>we provide the best loan programs for your businesses and help you to make them grow.</p>
+        </div>
+       
+            <form method="post" action="~/Home/login_Det" id="log">
+            <h1>Login Form</h1>
+            <br>
+            <input type="text" id="user" name="uname" placeholder="usename">
+            <input type="password" id="pass" name="upass" placeholder="password">
+            <p id="wrong">@ViewBag.Message1</p>
+            <input type="submit" value="Login" id="login" />
+            <p id="newtext">Don't have a account?</p>
+            <a href="" onclick="window.open('@Url.Action("signuppage","Home")')">Signup</a>
+            </form>
+
+       
+    </div>
+</body>
+</html>

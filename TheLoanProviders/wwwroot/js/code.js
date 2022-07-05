@@ -1,13 +1,13 @@
 ﻿var username = "hassan47";
 var password = "saan47";
 
-function login() {
+function _login() {
     var password2 = document.getElementById('pass').value;
     var username2 = document.getElementById('user').value;
 
     if (username2 == username && password2 == password) {
-        alert("User " + username + " Loggedin");
 
+        window.open("../Views/Home/dashboard.cshtml");
     }
     else {
         document.getElementById('wrong').style.display = "block";
@@ -40,4 +40,55 @@ function dnt() {
     else {
         alert("Thanks for Donation!!")
     }
+}
+
+
+var slidecount = 1;
+function slider() {
+    slidecount = slidecount + 1;
+    if (slidecount % 2 == 0) {
+        document.getElementById('slider').style.backgroundImage = "url('/assets/slider.jpg')";
+        document.getElementById('sideBar').style.display = "block";
+    }
+    else if (slidecount % 2 == 1) {
+        document.getElementById('slider').style.backgroundImage = "url('/assets/sidebar.jpg')";
+        document.getElementById('sideBar').style.display = "none";
+    }
+}
+
+
+function loadpage(pagename0, pagename1, pagename2, pagename3) {
+
+    document.getElementById(pagename0).style.display = "none";
+    document.getElementById(pagename1).style.display = "none";
+    document.getElementById(pagename2).style.display = "none";
+    document.getElementById(pagename3).style.display = "block";
+}
+
+
+var blnc = 0;
+function addblnc() {
+    document.getElementById('wp').style.display = "none";
+    document.getElementById('inputbx').style.display = "none";
+    var newblnc = document.getElementById('newblnc').value;
+    var blnccheckuser = document.getElementById('blnccheckuser').value;
+    if (newblnc != "" && blnccheckuser != "") {
+        if (blnccheckuser == "hassan47") {
+
+            blnc += parseInt(newblnc);
+            document.getElementById('blnc').innerHTML = blnc;
+            document.getElementById('newblnc').value = "";
+            document.getElementById('blnccheckuser').value = "";
+        }
+        else {
+            document.getElementById('wp').style.display = "block";
+            document.getElementById('newblnc').value = "";
+            document.getElementById('blnccheckuser').value = "";
+        }
+    }
+    else {
+        document.getElementById('inputbx').style.display = "block";
+    }
+
+
 }

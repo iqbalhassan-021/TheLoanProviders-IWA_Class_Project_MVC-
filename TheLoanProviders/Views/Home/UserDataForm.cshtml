@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/userchoice.css">
+    <link rel="shortcut icon" href="/assets/tlp.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLP - Entry</title>
+</head>
+<body>
+    <div id="container">
+        <form method="post" action="~/Home/userinfo" id="userform">
+            <h1>The Loan Providers</h1><br>
+            <input type="text" name="applicantname" id="applicantname" placeholder="*Name" spellcheck="true">
+           
+            <input type="text" name="applicantage" id="applicantname" placeholder="Age" spellcheck="true">
+            <input type="text" name="applicantcnic" id="applicantname" placeholder="CNIC" spellcheck="true">
+            
+            <input type="text" name="applicantaddress" id="applicantname" placeholder="Address" spellcheck="true">
+            
+            <input type="text" name="applicantaddress2" id="applicantname" placeholder="Permanent Address" spellcheck="true">
+            
+            <input type="text" name="applicantReligion" id="applicantname" placeholder="Religion" spellcheck="true">
+            
+            <input type="text" name="applicantStatus" id="applicantname" placeholder="Marital Status" spellcheck="true">
+            <input type="text" name="applicantphone" id="applicantname" placeholder="*#Phone" spellcheck="true">
+            <p>@ViewBag.Message</p>
+            <input type="submit" value="Submit" id="submituserdata">
+            <button id="gohome" onclick="window.open('@Url.Action("Index","Home")')">HOME</button>
+
+           
+           
+           
+           
+           
+           
+        </form>
+    </div>
+</body>
+</html>

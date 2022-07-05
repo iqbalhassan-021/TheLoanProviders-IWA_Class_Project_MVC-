@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#container{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/architecture-building-town-city.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#userform{
+    height: 75%;
+    width: 55%;
+    background-color: rgba(128, 128, 128, 0.589);
+    border-radius: 12px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#userform h1{color: white;}
+#userform input{
+    margin-top: 20px;
+    height: 30px;
+    width: 75%;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 12px;
+    border: none;
+    
+}
+#userform p{
+    color: red;
+    margin-top: 10px;
+
+}
+
+#submituserdata{
+    font-size: large;
+    cursor: pointer;
+}
+#submituserdata:hover{
+  background-color: chocolate;
+  color: white;
+}
+#gohome{
+    margin-top: 20px;
+    height: 50px;
+    width: 55%;
+    padding-left: 10px;
+    outline: none;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: chocolate;
+    color: white;
+}
+
+@media (max-width: 712px){
+    #userform{
+        height: 85%;
+        width: 95%;
+    }
+
+
+}
+
+

@@ -1,0 +1,144 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo,#log{
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo{
+    background-image: url("/assets/architecture-building-town-city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+
+#logo h1{
+    color: white;
+    font-size: 56px;
+}
+
+
+#logo p{
+    color: white;
+    width: 60%;
+}
+
+#user{
+    margin-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    width: 40%;
+    
+}
+#uname{
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    width: 40%;
+}
+#pass{
+    margin-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    width: 40%;
+}
+#pass2{
+    margin-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    width: 40%;
+}
+
+#pin{
+    margin-top: 20px;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    color: orangered;
+    width: 40%;
+}
+#wrong{
+    margin-top: 10px;
+    color: red;
+
+    font-size: 12px;
+    display: none;
+}
+#match{
+    margin-top: 10px;
+    color: red;
+
+    font-size: 12px;
+    display: none;
+}
+#signup{
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    background-color: orangered;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px silver;
+    border-radius: 10px;
+
+}
+
+#newtext{
+    margin-top: 10px;
+    color: orangered;
+
+    font-size: 12px;
+   
+}
+#log a{
+    margin-top: 10px;
+    color: orangered;
+}
+
+@media (max-width: 712px){
+    #container{
+        flex-direction: column;
+        height: 100vh;
+    }
+    #logo,#log{
+        width: 100%;
+    }
+    #logo{
+        height: 30vh;
+    }
+    #log{
+        height: 70vh;
+    }
+}

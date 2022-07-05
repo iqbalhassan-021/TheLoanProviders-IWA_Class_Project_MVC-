@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/js/code.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="icon" href="/assets/tlp.jpg">
+    <title>TLP - Dashboard</title>
+</head>
+<body>
+    <div id="mobilesidebar">
+        <div id="nav">
+            <button id="slider" onclick="slider()">
+
+            </button>
+        </div>
+        <div id="freearea"></div>
+    </div>
+   <div id="wrapper">
+    
+        <div id="sideBar">
+            <div id="logo">
+                <img src="/assets/tlp.jpg" alt="logo" srcset="">
+            </div>
+            <div id="buttonholder">
+                <button id="homepage" onclick="loadpage('Donations','Requests','Staff','home')">HOME</button>
+                 <button id="donationpage" onclick="loadpage('home','Requests','Staff','Donations')">DONATIONS</button>
+                <button id="requestpage" onclick="loadpage('home','Staff','Donations','Requests')">REQUESTS</button>
+                <button id="staffpage" onclick="loadpage('home','Requests','Donations','Staff')">STAFF</button>
+         
+            </div>
+        </div>
+        <div id="home">
+            <div id="currentBalance">
+                <div id="BalanceHolder">
+                    <h1 id="blnc">0</h1>
+                </div>
+            </div>
+            <div id="innerwrapper">
+                <div id="addblnc">
+                    <input type="text" name="" id="newblnc" placeholder="Value">
+                    <input type="password" name="" id="blnccheckuser" placeholder="password">
+                    <p id="wp">Invalid Password</p>
+                    <p id="inputbx">Please fill he inputs</p>
+                    <button onclick="addblnc()" id="blncbtn">ADD BALANCE</button>
+                </div>
+                <div id="workingstaffcounter">
+                    <div id="workingstaffcounterup">
+                        <h1 id="staffcounter">0</h1>
+                    </div>
+                    <div id="workingstaffcounterdn">
+                        <p>WORKING STAFF</h1>
+                    </div>
+                </div>
+                <div id="donationcounter">
+                    <div id="donationcounterup">
+                        <h1 id="donationcountervalue">0</h1>
+                    </div>
+                    <div id="donationcounterdn">
+                        <p>TOTALL DONATIONS</h1>
+                    </div>
+           </div>
+            </div>
+        </div>
+        <div id="Donations">
+            <div id="Donationstext">
+                <h1>DONATIONS</h1>
+            </div>
+            <div id="Donationstable">
+                <table id="dtable">
+                    <thead>
+                        <td>Name</td>
+                        <td>Donation</td>
+                    </thead>
+                    <tbody>
+                        <td>Ali</td>
+                        <td>500</td>
+                    </tbody>
+                    <tbody>
+                        <td>Hassan</td>
+                        <td>500</td>
+                    </tbody>  
+                     <tbody>
+                        <td>Kamal</td>
+                        <td>500</td>
+                    </tbody> 
+                </table>
+            </div>
+        </div>
+
+
+
+        <div id="Requests">
+            <div id="Donationstext">
+                <h1>Requests</h1>
+            </div>
+            <div id="Donationstable">
+                <table id="dtable">
+                    <thead>
+                        <td>Name</td>
+                        <td>Plan</td>
+                        <td>#Phone</td>
+                    </thead>
+                    <tbody>
+                        <td>Ali</td>
+                        <td>Intermediate</td>
+                        <td>03107949622</td>
+                    </tbody>
+                    <tbody>
+                        <td>Hassan</td>
+                        <td>Intermediate</td>
+                        <td>03107949622</td>
+                    </tbody>  
+                     <tbody>
+                        <td>Kamal</td>
+                        <td>Intermediate</td>
+                        <td>03107949622</td>
+                    </tbody> 
+                </table>
+            </div>
+        </div>
+
+        <div id="Staff">
+            <div id="Stafftext">
+                <h1>Staff</h1>
+            </div>
+            <div id="Stafftable">
+                <table id="dtable">
+                    <thead>
+                        <td>Name</td>
+                        <td>ID</td>
+                        <td>Type</td>
+                    </thead>
+                    <tbody>
+                        <td>Ali</td>
+                        <td>A0123</td>
+                        <td>Recovery Officer</td>
+                    </tbody>
+                    <tbody>
+                        <td>Ali</td>
+                        <td>A0124</td>
+                        <td>Recovery Officer</td>
+                    </tbody>  
+                     <tbody>
+                        <td>Ali</td>
+                        <td>A0125</td>
+                        <td>Data Entry</td>
+                    </tbody> 
+                </table>
+            </div>
+            <div id="removestaff">
+                <input type="text" placeholder="Name" id="stfname">
+                <input type="text" placeholder="ID" id="stfID">
+                <button id="rmbtn">Remove</button>
+            </div>
+        </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="/JS/code.js"></script>
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="icon" href="~/assets/tlp.jpg" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLP - Signup</title>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            <h1>T L P</h1>
+            <p>we provide the best loan programs for your businesses and help you to make them grow.</p>
+        </div>
+        <form method="post" action="~/Home/singupuser" id="log">
+            <h1>Signup Form</h1>
+            <br>
+            <input type="text" id="uname" placeholder="Name" >
+         
+            <input type="text" id="user" placeholder="usename" name="newusername">
+            <input type="password" id="pass" placeholder="password" name="newuserpass">
+            <input type="password" id="pass2"  placeholder="Retype password">
+            <input type="password" id="pin"  placeholder="Security pin" name="securitypin">
+            <p id="match">Pssword Doesn't match</p>
+            <input type="submit" value="signup" id="signup"/>
+          
+          
+           
+        </form>
+    </div>
+</body>
+</html>

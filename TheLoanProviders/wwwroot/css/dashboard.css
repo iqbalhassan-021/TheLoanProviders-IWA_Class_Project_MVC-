@@ -1,0 +1,568 @@
+﻿* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#sideBar {
+    height: 100%;
+    width: 20%;
+    background-color: black;
+}
+
+#logo {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #logo img {
+        height: 100%;
+    }
+
+#buttonholder {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    #buttonholder button {
+        height: 50px;
+        border-style: none;
+        background-color: black;
+        color: white;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+        #buttonholder button:hover {
+            background-color: aliceblue;
+            color: black;
+        }
+
+#home {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#currentBalance {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#BalanceHolder {
+    height: 80%;
+    width: 50%;
+    background-color: rgba(180, 206, 206, 0.527);
+    border-radius: 12px;
+    box-shadow: 12px 12px 22px silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #BalanceHolder h1 {
+        font-size: 90px;
+        color: white;
+    }
+
+#addblnc {
+    background-color: rgba(180, 206, 206, 0.527);
+    height: 70%;
+    width: 25%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 12px 12px 22px silver;
+    margin-left: 50px;
+}
+
+#innerwrapper {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#addblnc input {
+    height: 40px;
+    width: 340px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+}
+
+#blncbtn {
+    height: 40px;
+    width: 340px;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(180, 206, 206, 0.527);
+    border-style: none;
+}
+
+#wp {
+    color: red;
+    display: none;
+}
+
+#inputbx {
+    color: red;
+    display: none;
+}
+
+
+
+#workingstaffcounter {
+    background-color: rgba(180, 206, 206, 0.527);
+    height: 70%;
+    width: 25%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 12px 12px 22px silver;
+    margin-left: 50px;
+}
+
+#workingstaffcounterup {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#staffcounter {
+    font-size: 90px;
+    color: white;
+}
+
+#workingstaffcounterdn {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    #workingstaffcounterdn p {
+        color: gray;
+    }
+
+#donationcounter {
+    background-color: rgba(180, 206, 206, 0.527);
+    height: 70%;
+    width: 25%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 12px 12px 22px silver;
+    margin-left: 50px;
+}
+
+#donationcounterup {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#donationcountervalue {
+    font-size: 90px;
+    color: white;
+}
+
+#donationcounterdn {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    #donationcounterdn p {
+        color: gray;
+    }
+
+#home {
+    display: none;
+}
+
+#Donations {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#Donationstext {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+#Donationstable {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#dtable {
+    width: 70%;
+    text-align: center;
+}
+
+    #dtable thead {
+        background-color: skyblue;
+        height: 40px;
+    }
+
+    #dtable tbody {
+        background-color: rgb(147, 198, 218);
+        height: 40px;
+    }
+
+        #dtable tbody:nth-child(Even) {
+            background-color: rgb(206, 226, 228);
+            height: 40px;
+        }
+
+#Donations {
+    display: none;
+}
+
+
+
+
+#Requests {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#Requeststext {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+#Requeststable {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#dtable {
+    width: 70%;
+    text-align: center;
+}
+
+    #dtable thead {
+        background-color: skyblue;
+        height: 40px;
+    }
+
+    #dtable tbody {
+        background-color: rgb(147, 198, 218);
+        height: 40px;
+    }
+
+        #dtable tbody:nth-child(Even) {
+            background-color: rgb(206, 226, 228);
+            height: 40px;
+        }
+
+#Donations {
+    display: none;
+}
+
+#Requests {
+    display: none;
+}
+
+#Staff {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#Stafftext {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+#Stafftable {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+#removestaff {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+    #removestaff input {
+        height: 40px;
+        width: 340px;
+        margin-top: 20px;
+        outline: none;
+        margin-left: 10px;
+    }
+
+#rmbtn {
+    height: 40px;
+    width: 340px;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(180, 206, 206, 0.527);
+    border-style: none;
+    margin-left: 10px;
+}
+
+#Staff {
+    display: none;
+}
+
+#home {
+    display: block;
+}
+
+#mobilesidebar {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: none;
+}
+
+#addblnc input {
+    width: 85%;
+    padding-left: 10px;
+}
+
+#addblnc button {
+    width: 85%;
+}
+
+@media (max-width: 712px) {
+
+    #sideBar {
+        display: none;
+    }
+
+    #mobilesidebar {
+        display: block;
+    }
+
+    #home {
+        width: 100%;
+        height: 220vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #wrapper {
+        height: 250vh;
+    }
+
+    #currentBalance {
+        width: 100%;
+    }
+
+    #BalanceHolder {
+        height: 50%;
+        width: 95%;
+    }
+
+        #BalanceHolder h1 {
+            font-size: 46px;
+        }
+
+    #innerwrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #addblnc {
+        width: 90%;
+        margin-left: 0px;
+    }
+
+        #addblnc input {
+            width: 95%;
+            margin-left: 0px;
+        }
+
+        #addblnc button {
+            width: 95%;
+            margin-left: 0px;
+        }
+
+    #workingstaffcounter {
+        margin-top: 30px;
+        width: 90%;
+        margin-left: 0px;
+    }
+
+    #donationcounter {
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 0px;
+    }
+
+    #home {
+        display: none;
+    }
+
+    #Donations {
+        display: none;
+    }
+
+    #Donations {
+        width: 100%;
+    }
+
+    #Donationstext {
+        height: 5%;
+    }
+
+    #Donationstable {
+        width: 100%;
+        display: block;
+    }
+
+    #dtable {
+        width: 100%;
+    }
+
+    #Requests {
+        display: none;
+    }
+
+    #Requests {
+        width: 100%;
+    }
+
+    #Staff {
+        display: none;
+    }
+
+    #Staff {
+        width: 100%;
+    }
+
+    #Stafftext {
+        height: 5%;
+    }
+
+    #Stafftable {
+        width: 100%;
+        display: block;
+        height: 20%;
+    }
+
+    #dtable {
+        width: 100%;
+    }
+
+    #removestaff {
+        flex-direction: column;
+        height: 20%;
+    }
+
+    #mobilesidebar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #nav {
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #freearea {
+        height: 100%;
+        width: 80%;
+    }
+
+    #home {
+        display: block;
+    }
+
+    #slider {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border-style: none;
+        outline: none;
+        background-image: url("/assets/sidebar.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #sideBar {
+        display: none;
+        position: absolute;
+        width: 100%;
+    }
+}
