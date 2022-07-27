@@ -1,10 +1,14 @@
-﻿namespace TheLoanProviders.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TheLoanProviders.Models
 {
-    public class Login
+  
+    public class signuppageData
     {
-    
-        string username { get; set; }
-        string userpass { get; set; }
+        [Key]
+        public string newusername { get; set; }
+        public string newuserpass { get; set; }
+        public string newuserfname { get; set; }
 
     }
 }

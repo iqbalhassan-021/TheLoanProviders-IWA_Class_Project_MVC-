@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using TheLoanProviders.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var cs = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<LoanDbContext> (options => options.UseSqlServer(cs));
 
 var app = builder.Build();
 

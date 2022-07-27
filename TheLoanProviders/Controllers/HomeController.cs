@@ -1,19 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TheLoanProviders.Data;
+using TheLoanProviders.Models;
 
 namespace TheLoanProviders.Controllers
 {
     public class HomeController : Controller
     {
-
+        LoanDbContext _loanDbContext;
+        public HomeController(LoanDbContext loanDbContext)
+        {
+    
+                _loanDbContext = loanDbContext;
+        }
         public ActionResult Index()
         {
-
 
             return View();
         }
         public ActionResult loginpage()
         {
 
+      
 
             return View();
         }
@@ -21,12 +28,13 @@ namespace TheLoanProviders.Controllers
         {
 
 
+
             return View();
         }
-        public ActionResult dashboard()
+        public IActionResult dashboard()
         {
 
-
+            ViewBag.data = _loanDbContext.Login.ToList();
             return View();
         }
         public IActionResult login_Det(string uname, string upass)
@@ -75,19 +83,27 @@ namespace TheLoanProviders.Controllers
                 return View("Index");
             }
         }
-
-        public IActionResult singupuser(string newuserpass, string newusername,string securitypin)
+        [HttpPost]
+        public IActionResult singupuser(string newuserpass, string newusername,string securitypin,string newuserfname, signuppageData signuppageuser)
         {
-            if (newuserpass == null && newusername == null && securitypin !="hassan47")
-            {
+            //if (newuserpass == null && newusername == null && securitypin !="hassan47")
+            //{
 
-                return View("signuppage");
+            //    return View("signuppage");
                
-            }
-            else
-            {
-                return View("loginpage");
-            }
+            //}
+            //else
+            //{
+            //    return View("loginpage");
+            //}
+
+            _loanDbContext.Add(signuppageuser);
+            _loanDbContext.SaveChanges();
+            return View("loginpage");
+        }
+        public IActionResult Login(signuppageData signuppage)
+        {
+            return View();
         }
 
     }

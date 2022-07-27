@@ -51,7 +51,7 @@
                         <h1 id="staffcounter">0</h1>
                     </div>
                     <div id="workingstaffcounterdn">
-                        <p>WORKING STAFF</h1>
+                        <p>WORKING STAFF</p>
                     </div>
                 </div>
                 <div id="donationcounter">
@@ -59,7 +59,7 @@
                         <h1 id="donationcountervalue">0</h1>
                     </div>
                     <div id="donationcounterdn">
-                        <p>TOTALL DONATIONS</h1>
+                        <p>TOTALL DONATIONS</p>
                     </div>
            </div>
             </div>
@@ -131,23 +131,31 @@
                     <thead>
                         <td>Name</td>
                         <td>ID</td>
-                        <td>Type</td>
+                   
                     </thead>
                     <tbody>
                         <td>Ali</td>
                         <td>A0123</td>
-                        <td>Recovery Officer</td>
+                    
                     </tbody>
                     <tbody>
                         <td>Ali</td>
                         <td>A0124</td>
-                        <td>Recovery Officer</td>
+                     
                     </tbody>  
                      <tbody>
                         <td>Ali</td>
                         <td>A0125</td>
-                        <td>Data Entry</td>
+                
                     </tbody> 
+                    @foreach(var tabledata in ViewBag.data)
+                    {
+                          <tbody>
+                        <td>@tabledata.newuserfname</td>
+                        <td>@tabledata.newusername</td>
+                
+                    </tbody> 
+                    }
                 </table>
             </div>
             <div id="removestaff">
